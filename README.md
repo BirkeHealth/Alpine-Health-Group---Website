@@ -1,6 +1,6 @@
 # Alpine Health Group Website
 
-Static marketing website scaffold for Haven Health Insurance using a green alpine design direction.
+Static marketing website scaffold for Alpine Health Group using a green alpine design direction.
 
 ## Pages
 - Home (`/index.html`)
