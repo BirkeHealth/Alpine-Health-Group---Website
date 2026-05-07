@@ -1,0 +1,246 @@
+:root {
+  --color-deep-pine: #1F4D3A;
+  --color-forest: #2F6B4F;
+  --color-alpine: #4F8A68;
+  --color-sage: #A9C3B0;
+  --color-glacier: #F5F7F2;
+  --color-snow: #FFFFFF;
+  --color-moss: #6FA57C;
+  --color-stone: #6B7280;
+  --color-charcoal: #1F2937;
+  --shadow-soft: 0 10px 30px rgba(31, 77, 58, 0.08);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --container: 1120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  color: var(--color-charcoal);
+  background: var(--color-snow);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(calc(100% - 2rem), var(--container));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(245, 247, 242, 0.96);
+  border-bottom: 1px solid rgba(31, 77, 58, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.site-header__inner,
+.site-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-deep-pine);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.site-nav a {
+  color: var(--color-deep-pine);
+  font-weight: 600;
+}
+
+.button,
+button,
+input[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 1.35rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--color-forest);
+  color: var(--color-snow);
+  box-shadow: var(--shadow-soft);
+}
+
+.button--secondary {
+  background: transparent;
+  color: var(--color-deep-pine);
+  border: 1px solid rgba(31, 77, 58, 0.15);
+  box-shadow: none;
+}
+
+.hero {
+  background: linear-gradient(180deg, #f5f7f2 0%, #ffffff 100%);
+  padding: 5rem 0 4rem;
+}
+
+.hero__grid,
+.grid-2,
+.grid-3 {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero__grid,
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.kicker {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--color-sage);
+  color: var(--color-deep-pine);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+h1, h2, h3 {
+  font-family: Lora, Georgia, serif;
+  color: var(--color-deep-pine);
+  line-height: 1.15;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.card,
+.panel,
+.stat,
+.faq-item,
+.blog-card {
+  background: var(--color-snow);
+  border: 1px solid rgba(31, 77, 58, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.surface {
+  background: var(--color-glacier);
+}
+
+.site-footer {
+  background: var(--color-deep-pine);
+  color: var(--color-snow);
+  margin-top: 3rem;
+}
+
+.site-footer a,
+.site-footer .brand {
+  color: var(--color-snow);
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(31, 77, 58, 0.15);
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-moss);
+  outline-offset: 3px;
+}
+
+.small-text {
+  color: var(--color-stone);
+}
+
+@media (max-width: 800px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    top: calc(100% + 0.5rem);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    background: var(--color-snow);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .hero__grid,
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
