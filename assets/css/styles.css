@@ -339,11 +339,17 @@ select {
   }
 
   .brand__logo {
-    height: 38px;
+    height: 48px;
+  }
+
+  .nav-toggle {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.875rem;
+    width: auto;
   }
 
   .button,
-  button,
+  button:not(.nav-toggle),
   input[type="submit"] {
     width: 100%;
   }
