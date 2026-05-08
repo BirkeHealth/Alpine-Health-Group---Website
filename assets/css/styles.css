@@ -322,6 +322,14 @@ select {
 }
 
 @media (max-width: 800px) {
+  section {
+    padding: 3rem 0;
+  }
+
+  .brand__logo {
+    height: 44px;
+  }
+
   .nav-toggle {
     display: inline-flex;
   }
@@ -350,4 +358,42 @@ select {
     grid-template-columns: 1fr;
   }
 
+  .site-footer__inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-footer__inner > * {
+    width: 100%;
+  }
+
+  .partner-logos__grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.8rem;
+  }
+
+  .card,
+  .panel,
+  .stat,
+  .faq-item,
+  .blog-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header__inner {
+    padding: 0.75rem 0;
+  }
+
+  .brand__logo {
+    height: 38px;
+  }
+
+  .button,
+  button,
+  input[type="submit"] {
+    width: 100%;
+  }
 }
