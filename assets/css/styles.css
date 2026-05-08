@@ -109,6 +109,35 @@ input[type="submit"] {
   box-shadow: none;
 }
 
+.partner-logos {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(31, 77, 58, 0.08);
+}
+
+.partner-logos__inner {
+  display: grid;
+  gap: 1rem;
+}
+
+.partner-logos__label {
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-deep-pine);
+}
+
+.partner-logos__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: center;
+}
+
+.partner-logos__grid img {
+  max-height: 62px;
+  width: 100%;
+  object-fit: contain;
+}
+
 .hero {
   background: linear-gradient(180deg, #f5f7f2 0%, #ffffff 100%);
   padding: 5rem 0 4rem;
@@ -242,5 +271,9 @@ select {
   .grid-2,
   .grid-3 {
     grid-template-columns: 1fr;
+  }
+
+  .partner-logos__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
