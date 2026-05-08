@@ -129,7 +129,7 @@ input[type="submit"] {
 .partner-logos__grid {
   display: flex;
   flex-wrap: nowrap;
-  gap: clamp(0.35rem, 1.5vw, 1rem);
+  gap: clamp(0.2rem, 1.5vw, 1rem);
   align-items: center;
   justify-content: space-between;
 }
@@ -138,7 +138,7 @@ input[type="submit"] {
   max-height: var(--partner-logo-height);
   width: auto;
   flex: 0 1 auto;
-  min-width: clamp(48px, 10vw, 64px);
+  min-width: clamp(60px, 10vw, 64px);
   object-fit: contain;
 }
 
