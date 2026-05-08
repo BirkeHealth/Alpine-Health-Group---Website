@@ -24,3 +24,11 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 if (yearTarget) {
   yearTarget.textContent = new Date().getFullYear();
 }
+
+const formStatus = document.querySelector('[data-form-status]');
+const urlParams = new URLSearchParams(window.location.search);
+
+if (formStatus && urlParams.get('submitted') === '1') {
+  formStatus.hidden = false;
+  window.history.replaceState({}, '', `${window.location.pathname}${window.location.hash}`);
+}

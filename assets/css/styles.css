@@ -233,6 +233,15 @@ section {
   margin-bottom: 1rem;
 }
 
+.form-status {
+  margin: 0 0 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  background: rgba(111, 165, 124, 0.15);
+  color: var(--color-deep-pine);
+  font-weight: 600;
+}
+
 label {
   font-weight: 700;
 }
