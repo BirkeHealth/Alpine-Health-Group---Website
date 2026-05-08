@@ -26,7 +26,12 @@ if (yearTarget) {
 }
 
 const formStatus = document.querySelector('[data-form-status]');
+const formNextTarget = document.querySelector('[data-form-next]');
 const urlParams = new URLSearchParams(window.location.search);
+
+if (formNextTarget) {
+  formNextTarget.value = `${window.location.href.split('?')[0]}?submitted=1`;
+}
 
 if (formStatus && urlParams.get('submitted') === '1') {
   formStatus.hidden = false;
