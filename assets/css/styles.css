@@ -129,16 +129,17 @@ input[type="submit"] {
 .partner-logos__grid {
   display: flex;
   flex-wrap: nowrap;
-  gap: 1rem;
+  gap: clamp(0.5rem, 2vw, 1rem);
   align-items: center;
   justify-content: space-between;
+  overflow-x: auto;
 }
 
 .partner-logos__grid img {
   max-height: var(--partner-logo-height);
   width: auto;
-  flex: 1 1 0;
-  min-width: 48px;
+  flex: 0 1 auto;
+  min-width: 64px;
   object-fit: contain;
 }
 
