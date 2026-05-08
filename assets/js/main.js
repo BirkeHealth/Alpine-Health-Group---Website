@@ -30,7 +30,7 @@ const formNextTarget = document.querySelector('[data-form-next]');
 const urlParams = new URLSearchParams(window.location.search);
 
 if (formNextTarget) {
-  formNextTarget.value = `${window.location.href.split('?')[0]}?submitted=1`;
+  formNextTarget.value = `${window.location.origin}${window.location.pathname}?submitted=1`;
 }
 
 if (formStatus && urlParams.get('submitted') === '1') {
