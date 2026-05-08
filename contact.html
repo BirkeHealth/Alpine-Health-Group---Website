@@ -43,14 +43,17 @@
       <div class="container grid-2">
         <article class="card">
           <h2>Send a message</h2>
-          <form>
+          <p class="form-status is-hidden" data-form-status role="status" aria-live="polite">Your message has been sent. We’ll follow up soon.</p>
+          <form action="https://formsubmit.co/AlpineHealth@memberservices.online" method="POST">
+            <input type="hidden" name="_subject" value="New Alpine Health Group contact form submission">
+            <input type="hidden" name="_next" value="https://havenhealthinsurance.com/contact.html?submitted=1" data-form-next>
             <div class="form-group">
               <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name">
+              <input id="name" name="name" type="text" autocomplete="name" required>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email">
+              <input id="email" name="email" type="email" autocomplete="email" required>
             </div>
             <div class="form-group">
               <label for="phone">Phone</label>
@@ -58,7 +61,7 @@
             </div>
             <div class="form-group">
               <label for="message">How can we help?</label>
-              <textarea id="message" name="message" rows="6"></textarea>
+              <textarea id="message" name="message" rows="6" required></textarea>
             </div>
             <button type="submit">Submit inquiry</button>
           </form>
