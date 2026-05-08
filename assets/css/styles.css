@@ -242,6 +242,10 @@ section {
   font-weight: 600;
 }
 
+.is-hidden {
+  display: none;
+}
+
 label {
   font-weight: 700;
 }

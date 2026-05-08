@@ -32,10 +32,12 @@ const formNextTarget = document.querySelector('[data-form-next]');
 const urlParams = new URLSearchParams(window.location.search);
 
 if (formNextTarget) {
-  formNextTarget.value = `${window.location.origin}${window.location.pathname}?${formSubmittedParam}=${formSubmittedValue}`;
+  const nextUrlParams = new URLSearchParams(window.location.search);
+  nextUrlParams.set(formSubmittedParam, formSubmittedValue);
+  formNextTarget.value = `${window.location.origin}${window.location.pathname}?${nextUrlParams.toString()}`;
 }
 
 if (formStatus && urlParams.get(formSubmittedParam) === formSubmittedValue) {
-  formStatus.hidden = false;
+  formStatus.classList.remove('is-hidden');
   window.history.replaceState({}, '', `${window.location.pathname}${window.location.hash}`);
 }
