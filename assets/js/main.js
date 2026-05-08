@@ -32,7 +32,7 @@ const formNextTarget = document.querySelector('[data-form-next]');
 const urlParams = new URLSearchParams(window.location.search);
 
 if (formNextTarget) {
-  const nextUrlParams = new URLSearchParams(urlParams);
+  const nextUrlParams = new URLSearchParams();
   nextUrlParams.set(formSubmittedParam, formSubmittedValue);
   formNextTarget.value = `${window.location.origin}${window.location.pathname}?${nextUrlParams.toString()}`;
 }
