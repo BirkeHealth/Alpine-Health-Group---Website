@@ -13,6 +13,7 @@
   --radius-md: 16px;
   --radius-sm: 10px;
   --container: 1120px;
+  --partner-logo-height: 62px;
 }
 
 * {
@@ -133,7 +134,7 @@ input[type="submit"] {
 }
 
 .partner-logos__grid img {
-  max-height: 62px;
+  max-height: var(--partner-logo-height);
   width: 100%;
   object-fit: contain;
 }
