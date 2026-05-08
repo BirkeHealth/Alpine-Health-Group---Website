@@ -1,6 +1,8 @@
 const menuButton = document.querySelector('[data-menu-button]');
 const siteNav = document.querySelector('[data-site-nav]');
 const yearTarget = document.querySelector('[data-year]');
+const formSubmittedParam = 'submitted';
+const formSubmittedValue = '1';
 
 if (menuButton && siteNav) {
   menuButton.addEventListener('click', () => {
@@ -30,10 +32,10 @@ const formNextTarget = document.querySelector('[data-form-next]');
 const urlParams = new URLSearchParams(window.location.search);
 
 if (formNextTarget) {
-  formNextTarget.value = `${window.location.origin}${window.location.pathname}?submitted=1`;
+  formNextTarget.value = `${window.location.origin}${window.location.pathname}?${formSubmittedParam}=${formSubmittedValue}`;
 }
 
-if (formStatus && urlParams.get('submitted') === '1') {
+if (formStatus && urlParams.get(formSubmittedParam) === formSubmittedValue) {
   formStatus.hidden = false;
   window.history.replaceState({}, '', `${window.location.pathname}${window.location.hash}`);
 }
