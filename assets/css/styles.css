@@ -137,8 +137,8 @@ input[type="submit"] {
 .partner-logos__grid img {
   max-height: var(--partner-logo-height);
   width: auto;
-  flex: 1 1 0;
-  min-width: clamp(36px, 10vw, 64px);
+  flex: 0 1 auto;
+  min-width: clamp(48px, 10vw, 64px);
   object-fit: contain;
 }
 
