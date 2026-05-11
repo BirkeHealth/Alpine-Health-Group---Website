@@ -149,7 +149,6 @@ input[type="submit"] {
   height: auto;
   display: block;
   border-radius: var(--radius-lg);
-  transform: rotate(180deg);
 }
 
 .hero {
