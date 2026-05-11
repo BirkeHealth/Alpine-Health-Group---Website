@@ -163,7 +163,8 @@ input[type="submit"] {
 }
 
 .hero__grid {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  align-items: center;
 }
 
 .grid-2 {
@@ -217,6 +218,30 @@ section {
 
 .surface {
   background: var(--color-glacier);
+}
+
+.hero__panel {
+  justify-self: end;
+  max-width: 420px;
+  width: 100%;
+}
+
+.hero__panel h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  margin-bottom: 0.75rem;
+}
+
+.hero__panel p {
+  margin-bottom: 1rem;
+}
+
+.hero__panel-list {
+  margin: 0 0 1.5rem;
+  padding-left: 1.2rem;
+}
+
+.hero__panel-list li + li {
+  margin-top: 0.6rem;
 }
 
 .site-footer {
@@ -307,6 +332,11 @@ select {
   .grid-2,
   .grid-3 {
     grid-template-columns: 1fr;
+  }
+
+  .hero__panel {
+    justify-self: stretch;
+    max-width: none;
   }
 
   .site-footer__inner {
